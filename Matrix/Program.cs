@@ -91,6 +91,23 @@ namespace Matrix
             Console.WriteLine();
             MatrixChecker.CheckAddition(a00, a01, a10, a11, b00, b01, b10, b11, c00, c01, c10, c11);
 
+            //
+
+            Console.WriteLine("set your own matris");
+            string sa00, sa01, sa10, sa11, sb00, sb01, sb10, sb11;
+            sa00 = Console.ReadLine(); sa01 = Console.ReadLine(); sa10 = Console.ReadLine(); sa11 = Console.ReadLine(); sb00 = Console.ReadLine(); sb01 = Console.ReadLine(); sb10 = Console.ReadLine(); sb11 = Console.ReadLine();
+            a00 = float.Parse(sa00); a01 = float.Parse(sa01); a10 = float.Parse(sa10); a11 = float.Parse(sa11); b00 = float.Parse(sb00); b01 = float.Parse(sb01); b10 = float.Parse(sb10); b11 = float.Parse(sb11);
+
+            c00 = a00 * b00 + a01 * b10; c01 = a00 * b01 + a01 * b11; c10 = a10 * b00 + a11 * b10; c11 = a10 * b01 + a11 * b11;
+
+            Draw2x2Matrix(a00, a01, a10, a11);
+            Console.WriteLine("\n*");
+            Draw2x2Matrix(b00, b01, b10, b11);
+            Console.WriteLine("\n=");
+            Draw2x2Matrix(c00, c01, c10, c11);
+            Console.WriteLine();
+            MatrixChecker.CheckAddition(a00, a01, a10, a11, b00, b01, b10, b11, c00, c01, c10, c11);
+
             Console.ReadKey();
         }
     }
