@@ -49,7 +49,7 @@ namespace Matrix
 
             // Byt ut detta anropet med dina matrisvärden, så kommer programmet att rita ut dem istället :)
 
-            float a00=1, a01=2, a10=3, a11=4, b00=5, b01=16.5f, b10=7, b11=8, c00 = a00 + b00, c01 = a01 + b01, c10 = a10 + b10, c11 = a11 + b11;
+            float a00=1, a01=2, a10=3, a11=4, b00=5, b01=6, b10=7, b11=8, c00 = a00 + b00, c01 = a01 + b01, c10 = a10 + b10, c11 = a11 + b11;
 
 
             Draw2x2Matrix(a00, a01, a10, a11);
@@ -69,8 +69,6 @@ namespace Matrix
             Draw2x2Matrix(c00, c01, c10, c11);
             Console.WriteLine();
             MatrixChecker.CheckAddition(a00, a01, a10, a11, b00, b01, b10, b11, c00, c01, c10, c11);
-
-
 
             Console.ReadKey();
         }
