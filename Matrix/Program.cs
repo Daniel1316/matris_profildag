@@ -72,7 +72,7 @@ namespace Matrix
 
             float m00 = (float)dm00;
             float m01 = (float)dm01;
-            float m10 = (float)dm01 * -1;
+            float m10 = (float)-dm01;
             float m11 = (float)dm00;
 
             Draw2x2Matrix(m00, m01, m10, m11);
