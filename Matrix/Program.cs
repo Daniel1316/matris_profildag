@@ -60,6 +60,27 @@ namespace Matrix
             Console.WriteLine();
             MatrixChecker.CheckAddition(a00, a01, a10, a11, b00, b01, b10, b11, c00, c01, c10, c11);
 
+            //
+
+            float radians = 3.14f;
+
+            double dm00 = radians;
+            double dm01 = radians;
+
+            dm00 = Math.Cos(dm00);
+            dm01 = Math.Sin(dm01);
+
+            float m00 = (float)dm00;
+            float m01 = (float)dm01;
+            float m10 = (float)dm01 * -1;
+            float m11 = (float)dm00;
+
+            Draw2x2Matrix(m00, m01, m10, m11);
+            Console.WriteLine();
+            MatrixChecker.CheckRotationMatrix(radians, m00, m01, m10, m11);
+
+            //
+
             c00 = a00 * b00 + a01 * b10; c01 = a00 * b01 + a01 * b11; c10 = a10 * b00 + a11 * b10; c11 = a10 * b01 + a11 * b11;
 
             Draw2x2Matrix(a00, a01, a10, a11);
